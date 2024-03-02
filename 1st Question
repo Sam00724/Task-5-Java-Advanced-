@@ -1,0 +1,14 @@
+import java.util.*;
+import java.util.stream.*;
+
+class Main {
+    public static void main(String[] args)  {
+        Stream<String> names = Stream.of("aBc", "d", "ef");
+        List<String> uppercaseNames = names.map(String::toUpperCase).collect(Collectors.toList());
+        for(String name: uppercaseNames)
+            System.out.print(""+" "+" "+name);
+    }
+}
+
+OUTPUT:
+ABC D EF
