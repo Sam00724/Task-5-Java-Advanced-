@@ -1,0 +1,19 @@
+import java.util.*;
+import java.time.*;  
+
+class Main {
+    public static void main(String[] args)  {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter your birthdate(yyyy-mm-dd) :");
+       String date = sc.next();
+       LocalDate parsedDate = LocalDate.parse(date);
+       LocalDate currentDate = LocalDate.now();
+       Period period = Period.between(parsedDate, currentDate);  
+      System.out.printf("Your age is %d years %d months and %d days.", period.getYears(), period.getMonths(), period.getDays());  
+    }
+}
+
+OUTPUT:
+Enter your birthdate(yyyy-mm-dd) :
+2000-10-07
+Your age is 23 years 4 months and 24 days.
