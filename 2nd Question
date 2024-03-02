@@ -1,0 +1,19 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args)  {
+        List<String> listStrings = Arrays.asList("abc", "", "bc", "efg", "abcd", "", "jkl");
+        List<String> nonEmptyStrings = new ArrayList<String>();
+        for(String str: listStrings)
+            if(!str.isEmpty())
+                nonEmptyStrings.add(str);
+        
+        for(String nonEmptyStr: nonEmptyStrings)
+            System.out.println(nonEmptyStr);
+    }
+}
+
+OUTPUT:
+efg
+abcd
+jkl
